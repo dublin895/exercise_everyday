@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>EXERCISE EVERYDAY</title>
+
+        <!--Google Noto Sans Light-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
+
+        <!--Google Black Sans-->
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+
+        <style>
+            /** div:not(.logo) {*/
+            /*    font-family: 'Noto Sans KR', sans-serif;*/
+            /*}*/
+
+            @font-face {
+                font-family: 'GmarketSansLight';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'GmarketSansMedium';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+
+            @font-face {
+                font-family: 'GmarketSansBold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+
+            #front {
+                font-family: 'GmarketSansBold', sans-serif;
+                color: #FF4F40;
+                font-size: 15pt;
+            }
+
+            #rear {
+                font-family: 'GmarketSansLight', sans-serif;
+                color: white;
+                font-weight: 300;
+                font-size: 14pt;
+                margin-left: -3px;
+            }
+
+            #card-title {
+                font-family: 'GmarketSansBold', sans-serif;
+                margin-bottom: -3px;
+                margin-left: -2px;
+                color: #FF4F40;
+                font-size: 40px;
+                letter-spacing: -1.5px;
+            }
+
+            #card-subtitle {
+                font-family: 'GmarketSansMedium', sans-serif;
+                font-size: 15px;
+                color: #7D7D7D;
+                letter-spacing: -0.2px;
+                margin-bottom: 10px;
+            }
+
+            #card-text {
+                margin-top: 10px;
+                font-size: 12px;
+                letter-spacing: -0.4px;
+                color: #7D7D7D;
+            }
+
+            #price {
+                font-size: 14px;
+                margin-left: 5px;
+                letter-spacing: -0.2px;
+                color: #7D7D7D;
+            }
+
+            #slash {
+                font-size: 13px;
+                margin-right: 1px;
+                letter-spacing: -0.2px;
+                color: #7D7D7D;
+            }
+
+            #hour {
+                font-size: 15px;
+                font-weight: bolder;
+                color: #FF4F40;
+                letter-spacing: -0.2px;
+            }
+
+            #with1 {
+                font-size: 12px;
+                font-family: 'GmarketSansLight', sans-serif;
+                color: white;
+                font-weight: 900;
+            }
+
+            #with2 {
+                font-size: 12px;
+                font-family: 'GmarketSansBold', sans-serif;
+                font-weight: bolder;
+                color: white;
+            }
+
+            .with {
+                text-align: center;
+                margin-bottom: 3px;
+            }
+
+            .box {
+                width: 18.9rem;
+                background-color: #FF4F40;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .card-img-top {
+                border-radius: 0;
+                height: 165px;
+                min-width: 100%;
+                object-fit: cover;
+            }
+
+            .card {
+                border-radius: 20px;
+            }
+
+            .nav-link {
+                font-family: 'GmarketSansMedium', sans-serif;
+                color: white;
+            }
+
+            .nav-link:hover, .nav-link:visited, .nav-link:active {
+                color: white;
+            }
+
+            /* Carousel base class */
+            .carousel {
+                margin-bottom: 4rem;
+            }
+
+            /* Since positioning the image, we need to help out the caption */
+            .carousel-caption {
+                bottom: 3rem;
+                z-index: 10;
+            }
+
+            /* Declare heights because of positioning of img element */
+            .carousel-item {
+                height: 32rem;
+                background-color: #777;
+            }
+
+            .carousel-item > img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                height: 32rem;
+                object-fit: cover;
+                /*background-position: center;*/
+            }
+
+            .first-slide {
+                background: black;
+                opacity: 0.8;
+            }
+
+            .second-slide {
+                background: black;
+                opacity: 0.9;
+            }
+
+            .third-slide {
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: FlipH;
+                -ms-filter: "FlipH";
+                background: black;
+                opacity: 0.5;
+            }
+
+            .wrap {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            /*#front, #rear {*/
+            /*    display: inline;*/
+            /*}*/
+
+            /*.main-title {*/
+            /*    font-family: 'Black Han Sans', sans-serif;*/
+            /*    font-size: 18px;*/
+            /*    margin-bottom: -13px;*/
+            /*    color: rosybrown;*/
+        </style>
+    </head>
+    <body>
+        <div class="top_bar">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">
+                    <span id="front">EXERCISE</span>
+                    <span id="rear">EVERYDAY</span>
+                </a>
+                <a class="nav-link" href="#">실내 구기종목 </a>
+                <a class="nav-link" href="#">맨몸운동 </a>
+        </div>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide"
+                         src="https://images.unsplash.com/photo-1530138948699-6a75eebc9d9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80"
+                         alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>오늘, 운동 어떠세요?</h1>
+                            <p>힘들었던 하루지만 더욱 활기찬 날들을 위해 건강관리를 위한 잠깐의 운동은 어떠하신가요?<br>운동은 시작이 반이랍니다!!</p>
+                            <p><a class="btn btn-danger" href="#" role="button">수영 알아보기</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="second-slide"
+                         src="https://images.unsplash.com/photo-1434682772747-f16d3ea162c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+                         alt="Second slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>EXERCISE EVERYDAY가 여러분을 응원합니다!</h1>
+                            <p>운동이 주는 힘이 여러분의 내일을 만듭니다.<br>꾸준함이 습관이 되고 그 습관이 건강이라는 보물이 될 것입니다.</p>
+                            <p><a class="btn btn-danger" href="#" role="button">헬스 알아보기</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide"
+                         src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                         alt="Third slide">
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <h1>무리한 운동은 NO!</h1>
+                            <p>무리한 운동은 절대로 추천하지 않습니다!<br>가볍게 즐기듯이 꾸준히만 해도 좋은 효과를 볼 수 있습니다.</p>
+                            <p><a class="btn btn-danger" href="#" role="button">필라테스 알아보기</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="wrap">
+            <div class="card" style="width: 19rem;">
+                <div class="box">
+                    <div class="with">
+                        <span id="with1">WITH</span>
+                        <span id="with2">BALLS</span>
+                    </div>
+                </div>
+                <img class="card-img-top"
+                     src="https://www.satabletennis.org/images/table-tennis-sanantonio-texas-04.jpg"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h3 id="card-title">탁구</h3>
+                    <h6 id="card-subtitle">TABLE TENNIS</h6>
+                    <span id="icon">
+                        <img src="https://image.flaticon.com/icons/svg/2423/2423222.svg" width="15px">
+                        <span id="price">12,000~15,000원</span>
+                        <span id="slash"> / </span>
+                        <span id="hour">1시간</span>
+                    </span>
+                    <p id="card-text">직사각형 나무 탁자에 네트를 걸고 양 사이드에 선수들이 서서 탁구채로 속이 빈 작은 플라스틱 재질의 공을 쳐 넘기면서 한다. 얼핏 보면 사람
+                        둘이서
+                        탁자 하나 놓고 이리저리 움직이면서 공 치는 게 탁구를 한 번도 안 해본 사람에게는 쉬워 보이지만 뛰어난 반사신경과 구질을 파악하여 대응하는 감각을 요구하는 고도의
+                        스포츠다. 쉽게 즐기고 쉽게 그만 둘 수 있는 가벼운 느낌의 스포츠가 아니라 오히려 진입장벽은 높지만 한 번 빠지면 헤어나오지 못하는 고인물 게임과 같은 성격을
+                        가지고
+                        있다.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 19rem;">
+                <div class="box">
+                    <div class="with">
+                        <span id="with1">WITHOUT</span>
+                        <span id="with2">BALLS</span>
+                    </div>
+                </div>
+                <img class="card-img-top"
+                     src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1114&q=80"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h3 id="card-title">실내 클라이밍</h3>
+                    <h6 id="card-subtitle">INDOOR CLIMBING</h6>
+                    <span id="icon">
+                        <img src="https://image.flaticon.com/icons/svg/2423/2423222.svg" width="15px">
+                        <span id="price">약 20,000원</span>
+                        <span id="slash"> / </span>
+                        <span id="hour">1시간</span>
+                    </span>
+                    <p id="card-text">직바위를 닮은 어둡고 널찍한 벽면에 크고 작은 돌멩이가 빼곡히 들어차 있다. 벽에 붙은 돌멩이는 ‘홀드’라고 불리는 일종의 손잡이다. 클라이머는
+                        마치 사다리를 오르듯 홀드를 차례차례 옮겨 잡으며 벽을 탄다. 무조건 위로만 오르는 것은 아니다. 암벽 높이는 5~6m에 불과하다. 좌우로도 넓게 이동하면서 운동을 즐길 수
+                        있다.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
